@@ -1,0 +1,16 @@
+// Colors
+$primary-color: #EC008C;
+$secondary-color: #EEEEEE;
+$black: #000000;
+$white: #FFFFFF;
+$background-layer: transparentize($black, .5);
+
+// Fonts
+$primary-font: "HUGEAvantGardeBold";
+$secondary-font: "GalaxieCopernicusBook";
+$tertiary-font: "HelveticaNeueRegular";
+
+// Breakpoints
+$phone-max: 768px;
+$desktop-min: 1280;
+$big-desktop-min: 1444;

@@ -1,0 +1,35 @@
+.navbar {
+  height: 72px;
+  width: 100%;
+  background-color: $primary-color;
+  &__wrapper {
+    @extend %flex-row;
+    @extend %max-1280;
+    height: 100%;
+  }
+  &__item {
+    padding: 0 24px;
+    line-height: 75px;
+    cursor: pointer;
+    a {
+      color: $white;
+      pointer-events: none; /* I removed it's pointer event so I can get only it's parent click */
+    }
+    $item: &;
+    &--secondary-navbar {
+      display: none;
+    }
+    &:hover {
+      background-color: $white;
+      a {
+        color: $primary-color;
+      }
+      // #{$item}--secondary-navbar {
+      // display: block;
+      // }
+    }
+    &.active {
+      display: block;
+    }
+  }
+}

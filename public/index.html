@@ -1,12 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>HUGE NavExercise</title>
   <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-  hola
-<h1>Hello.</h1>
+<section id="navbar" class="navbar"></section>
+<script id="navbar-template" type="text/x-handlebars-template">
+  <div class="navbar__wrapper">
+    {{#each nemus_items}}
+      <div
+        data-active="false"
+        data-menu-type="primary"
+        class="navbar__item">
+        <a href="{{url}}">{{name}}</a>
+         {{#if secondary}}
+          <div
+            data-menu-type="secondary"
+            class="navbar__item--secondary-navbar">
+            {{#each secondary}}
+            <div class="navbar__item--secondary-navbar__item">
+              <a href="#" class="secondary-f">{{this}}</a>
+            </div>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+</script>
+<section class="hero">
+  <h1>Get paid for giving a shit.</h1>
+</section>
+<script src="/vendors/handlebars-v4.0.11.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>

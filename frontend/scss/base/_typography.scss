@@ -1,5 +1,25 @@
 h1 {
-  font: 20vmin/1 HUGEAvantGardeBold;
+  font: 120px/132px $primary-font;
   letter-spacing: -0.06em;
   text-align: center;
+  @include for-mobile-only {
+    font: 44px/48px $primary-font;
+  }
+}
+p {
+  font: 24px/36px $secondary-font;
+  @include for-mobile-only {
+    font: 14px/24px $secondary-font;
+  }
+}
+a {
+  font: 21px/48px $primary-font;
+  &.secondary-f {
+    font: 16px/48px $secondary-font;
+  }
+}
+small {
+  @include for-mobile-only {
+    font: 12px/16px $tertiary-font;
+  }
 }
