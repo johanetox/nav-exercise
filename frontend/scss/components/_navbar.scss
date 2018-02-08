@@ -1,35 +1,131 @@
 .navbar {
+  position: relative;
   height: 72px;
   width: 100%;
   background-color: $primary-color;
+  z-index: 1;
+  @include for-mobile-only {
+    height: 60px;
+    position: fixed;
+  }
+  &__icon {
+    padding: 0 24px;
+    line-height: 72px;
+  }
   &__wrapper {
     @extend %flex-row;
     @extend %max-1280;
     height: 100%;
+    @include for-mobile-only {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      top: 60px;
+      left: -100vw;
+      height: 100vh;
+      width: 80vw;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: white;
+    }
   }
   &__item {
+    position: relative;
     padding: 0 24px;
     line-height: 75px;
     cursor: pointer;
-    a {
-      color: $white;
-      pointer-events: none; /* I removed it's pointer event so I can get only it's parent click */
+    @include for-mobile-only {
+      height: 48px;
+      line-height: 48px;
     }
-    $item: &;
+    .primary-f {
+      pointer-events: none; /* I removed it's pointer event so I can get only it's parent click */
+      @include for-mobile-only {
+        color: black;
+      }
+    }
     &--secondary-navbar {
-      display: none;
+      position: absolute;
+      top: 72px;
+      left: 0;
+      max-height: 0;
+      overflow: hidden;
+      background-color: $white;
+      &__item {
+        width: 100%;
+        padding: 0 24px;
+        cursor: pointer;
+        &:hover {
+          background-color: $background-button;
+          .secondary-f {
+            color: $primary-color;
+          }
+        }
+        a {
+          display: inline-block;
+          width: max-content;
+        }
+      }
+      @include for-mobile-only {
+        position: relative;
+        top: 0;
+        &__item {
+          padding: 0;
+        }
+      }
     }
     &:hover {
       background-color: $white;
-      a {
+      @include for-mobile-only {
+        background-color: $background-button;
+      }
+      .primary-f {
         color: $primary-color;
       }
-      // #{$item}--secondary-navbar {
-      // display: block;
-      // }
     }
     &.active {
+      background-color: $white;
+      @include for-mobile-only {
+        height: auto;
+      }
+      .primary-f {
+        color: $primary-color;
+      }
+      &.arrow-down:after {
+        @include for-mobile-only {
+          background-position: 13% 100%;
+          transform: rotate(0.5turn);
+        }
+      }
+    }
+    &.active &--secondary-navbar {
+      max-height: 100vh;
       display: block;
+    }
+    &.arrow-down:after {
+        content: "";
+      @include for-mobile-only {
+        background-image: url(/images/arrow-down.svg);
+        background-repeat: no-repeat;
+        background-position: 87% center;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 100%;
+      }
+    }
+  }
+  .mobile-menu {
+    position: relative;
+    &__close {
+      position: absolute;
+      top: -5px;
+      right: 0px;
+    }
+    &__logo {
+      position: absolute;
+      top: 20px;
+      left: 24px;
     }
   }
 }

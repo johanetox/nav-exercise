@@ -61,7 +61,7 @@ gulp.task('sass_lint', () => {
 });
 
 // Runs static server with some default task then watches html/scss/js files
-gulp.task('default', ['sass', 'js', 'html'], () => {
+gulp.task('default', ['sass', 'js', 'html', 'images'], () => {
 
   // Just a copy/paste task to keep public file untouch
   gulp.src('frontend/fonts/*').pipe(gulp.dest('public/fonts/'));

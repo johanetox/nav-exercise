@@ -1,7 +1,15 @@
 .hero {
-  height: 100%;
+  display: flex;
+  align-items: center;
+  height: 640px;
   width: 100%;
   background-image: url(/images/background-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  @include for-mobile-only {
+    height: 240px;
+    &__title {
+      display: none;
+    }
+  }
 }

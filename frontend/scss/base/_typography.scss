@@ -14,7 +14,9 @@ p {
 }
 a {
   font: 21px/48px $primary-font;
+  color: $white;
   &.secondary-f {
+    color: $black;
     font: 16px/48px $secondary-font;
   }
 }

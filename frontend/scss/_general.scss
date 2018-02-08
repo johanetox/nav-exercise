@@ -10,3 +10,27 @@ body {
 * {
   transition: all 0.4s ease-in-out;
 }
+.bg-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom:0;
+  left: 0;
+  background-color: $background-layer;
+}
+.hide-on-desktop {
+  display: none;
+  @include for-mobile-only {
+    display: block;
+  }
+}
+.hide-on-mobile {
+  display: block;
+  @include for-mobile-only {
+    display: none;
+  }
+}
+.hide {
+  display: none;
+}
