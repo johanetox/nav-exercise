@@ -8,8 +8,8 @@
   background-size: cover;
   @include for-mobile-only {
     height: 240px;
-    &__title {
-      display: none;
-    }
+  }
+  &__title {
+    @extend %max-968;
   }
 }

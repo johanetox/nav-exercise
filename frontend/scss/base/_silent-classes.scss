@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: row;
 }
-%max-1280 {
-  max-width: 1280px;
+%max-1240 {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+%max-968 {
+  max-width: 968px;
   margin: 0 auto;
 }

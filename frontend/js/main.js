@@ -94,17 +94,17 @@ class NavFunctionality {
   openResponsiveMenu() {
     this.overlay.style.display = 'block'
     this.mobileMenu.style.left = '0'
-    this.mobileMenuIcon.style.display = 'block'
-    this.mobileMenuClose.style.display = 'block'
-    this.mobileMenuOpen.style.display = 'none'
+    this.mobileMenuIcon.style.left = '24px'
+    this.mobileMenuClose.style.left = 'calc(100% - 70px)'
+    this.mobileMenuOpen.style.left = '-100vw'
   }
   closeResponsiveMenu() {
     this.overlay.style.display = 'none'
     this.mobileMenu.style.left = '-100vw'
     this.overlay.style.display = 'none'
-    this.mobileMenuIcon.style.display = 'none'
-    this.mobileMenuClose.style.display = 'none'
-    this.mobileMenuOpen.style.display = 'block'
+    this.mobileMenuIcon.style.left = '-100vw'
+    this.mobileMenuClose.style.left = '-100vw'
+    this.mobileMenuOpen.style.left = '4px'
   }
 }
 

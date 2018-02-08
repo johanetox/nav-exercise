@@ -1,6 +1,6 @@
 h1 {
   font: 120px/132px $primary-font;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.03em;
   text-align: center;
   @include for-mobile-only {
     font: 44px/48px $primary-font;
@@ -21,6 +21,7 @@ a {
   }
 }
 small {
+  color: $black;
   @include for-mobile-only {
     font: 12px/16px $tertiary-font;
   }

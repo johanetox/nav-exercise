@@ -10,9 +10,9 @@
 </section>
 <script id="navbar-template" type="text/x-handlebars-template">
   <div class="hide-on-desktop mobile-menu">
-    <img id="open-menu" class=" mobile-menu__open" src="/images/toggle-open.svg" alt="open menu" width="60" />
-    <img id="close-menu" class="hide  mobile-menu__close" src="/images/toggle-close.svg" alt="close menu" width="70" />
-    <img id="logo-menu" class="hide  mobile-menu__logo" src="/images/HUGE-white.png" alt="huge logo" width="50" />
+    <img id="open-menu" class="mobile-menu__open" src="/images/toggle-open.svg" alt="open menu" width="60" />
+    <img id="close-menu" class="mobile-menu__close" src="/images/toggle-close.svg" alt="close menu" width="70" />
+    <img id="logo-menu" class="mobile-menu__logo" src="/images/HUGE-white.png" alt="huge logo" width="50" />
   </div>
   <div class="navbar__wrapper" id="vertical-menu">
     <div data-menu-type="primary" class="navbar__icon hide-on-mobile">
@@ -37,14 +37,15 @@
         {{/if}}
       </div>
     {{/each}}
+    <small class="hide-on-desktop copy-right">&#169; 2014 Huge. All Rights Reserved.</small>
   </div>
 </script>
 <section class="hero">
-  <h1 class="hero__title">Get paid for giving a shit.</h1>
+  <h1 class="hero__title hide-on-mobile">Get paid for giving a shit.</h1>
 </section>
 <section class="content">
-  <h1>Get paid for giving a shit.</h1>
-  <p>
+  <h1 class="content__title hide-on-desktop">Get paid for giving a shit.</h1>
+  <p class="content__text">
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Reiciendis similique tenetur voluptatem cupiditate itaque.
     Exercitationem error id porro excepturi, unde accusamus.

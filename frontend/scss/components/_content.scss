@@ -1,0 +1,12 @@
+.content {
+  @extend %max-968;
+  &__title {
+    margin: 60px 0;
+    @include for-mobile-only {
+      margin: 50px 0;
+    }
+  }
+  &__text {
+    padding: 0 24px;
+  }
+}
