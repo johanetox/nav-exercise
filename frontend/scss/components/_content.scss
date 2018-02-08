@@ -7,6 +7,10 @@
     }
   }
   &__text {
+    margin: 60px 0;
     padding: 0 24px;
+    @include for-mobile-only {
+      margin: 0;
+    }
   }
 }

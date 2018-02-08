@@ -1,0 +1,62 @@
+{
+  "nemus_items": [
+    {
+      "name": "Work",
+      "url": "#"
+    },
+    {
+      "name": "About",
+      "url": "#",
+      "secondary": [
+        "What we do",
+        "How we work",
+        "Leadership"
+      ]
+    },
+    {
+      "name": "Careers",
+      "url": "#",
+      "secondary": [
+        "Client Services",
+        "Creative",
+        "Motion & Media",
+        "Operations",
+        "People",
+        "Strategy",
+        "Technology",
+        "UX & Product Design"
+      ]
+    },
+    {
+      "name": "Ideas",
+      "url": "#",
+      "secondary": [
+        "Reports",
+        "Perspectives",
+        "Books",
+        "Videos"
+      ]
+    },
+    {
+      "name": "News",
+      "url": "#"
+    },
+    {
+      "name": "Events",
+      "url": "#"
+    },
+    {
+      "name": "Contact",
+      "url": "#",
+      "secondary": [
+        "Atlanta",
+        "Brooklyn",
+        "DC",
+        "London",
+        "Los Angeles",
+        "Oakland",
+        "Toronto"
+      ]
+    }
+  ]
+}

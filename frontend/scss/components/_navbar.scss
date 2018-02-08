@@ -35,6 +35,9 @@
     padding: 0 24px;
     line-height: 75px;
     cursor: pointer;
+    @include for-mobile-and-tablet-only {
+      padding: 0 2vw;
+    }
     @include for-mobile-only {
       height: 48px;
       line-height: 48px;
@@ -58,7 +61,7 @@
         padding: 0 24px;
         line-height: 48px;
         cursor: pointer;
-        &:hover {
+        &:hover, &:focus, &:active {
           background-color: $background-button;
           .secondary-f {
             color: $primary-color;
@@ -79,7 +82,7 @@
         }
       }
     }
-    &:hover {
+    &:hover, &:focus, &:active {
       background-color: $white;
       @include for-mobile-only {
         background-color: $background-button;
@@ -144,7 +147,6 @@
   }
   .copy-right {
     position: fixed;
-    display: block;
     bottom: 0;
     height: 48px;
     width: 80vw;
