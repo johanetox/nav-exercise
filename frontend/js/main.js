@@ -1,7 +1,7 @@
 'use strict'
 
 window.onload = () => {
-  console.log('hola')
+
   const navFuncitonality = new NavFunctionality()
   const overlay = document.getElementById('bg-overlay')
 

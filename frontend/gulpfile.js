@@ -16,23 +16,23 @@ const
 
 // sass tasks: adds vendor prefixes, compresses it, and updates browser
 gulp.task('sass', () =>
-  gulp.src('/scss/main.scss')
+  gulp.src('scss/main.scss')
     .pipe(postcss([autoprefixer()]))
     .pipe(sass({
       sourceComments: false,
       outputStyle: 'compressed'
     }))
-    .pipe(gulp.dest('/../public/styles/'))
+    .pipe(gulp.dest('../public/styles/'))
     .pipe(browserSync.stream())
 );
 
 // javascript tasks: Using babel in order to compile ES6 syntax into ES5, then minify it!
 gulp.task('js', () =>
-  gulp.src('/js/*.js')
+  gulp.src('js/*.js')
     .pipe(babel({ presets: ['env'] }))
     .pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('/../public/js/'))
+    .pipe(gulp.dest('../public/js/'))
     .pipe(browserSync.stream())
 );
 
@@ -40,13 +40,13 @@ gulp.task('js', () =>
 gulp.task('images', () =>
   gulp.src('/images/*')
     .pipe(imagemin({ verbose: false }))
-    .pipe(gulp.dest('/../public/images/'))
+    .pipe(gulp.dest('../public/images/'))
 );
 
 // just refreshes on html change
 gulp.task('html', () => {
-  gulp.src('/index.html')
-    .pipe(gulp.dest('/../public/'))
+  gulp.src('index.html')
+    .pipe(gulp.dest('../public/'))
     .pipe(browserSync.stream())
 });
 
@@ -54,7 +54,7 @@ gulp.task('html', () => {
 gulp.task('sass_lint', () => {
   const gulpStylelint = require('gulp-stylelint');
   return gulp
-    .src('/scss/**/*.scss')
+    .src('scss/**/*.scss')
     .pipe(gulpStylelint({
       reporters: [
         { formatter: 'string', console: true }
@@ -62,16 +62,16 @@ gulp.task('sass_lint', () => {
     }))
 });
 
-// Runs static server with some default task then watches html/scss/js files
+// Runs static server with some default task then watches htmlscss/js files
 gulp.task('default', ['sass', 'js', 'html', 'images'], () => {
 
   // Just a copy/paste task to keep public file untouch
-  gulp.src('/fonts/*').pipe(gulp.dest('/../public/fonts/'));
-  gulp.src('/vendors/*').pipe(gulp.dest('/../public/vendors/'));
-  gulp.src('/js/navbar_data.json').pipe(gulp.dest('/../public/js/'));
+  gulp.src('fonts/*').pipe(gulp.dest('../public/fonts/'));
+  gulp.src('vendors/*').pipe(gulp.dest('../public/vendors/'));
+  gulp.src('js/navbar_data.json').pipe(gulp.dest('../public/js/'));
   browserSync.init({
     server: {
-      baseDir: '/../public/'
+      baseDir: '../public/'
     }
   });
   gulp.watch('scss/**/*.scss', ['sass']);

@@ -19,6 +19,9 @@ a {
     color: $black;
     font: 16px/48px $secondary-font;
   }
+  @include for-mobile-and-tablet-only {
+    font-size: 18px;
+  }
 }
 small {
   color: $black;
