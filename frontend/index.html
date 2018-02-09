@@ -11,53 +11,59 @@
   <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
 </head>
 <body>
-<section id="navbar" class="navbar" role="navigation menu">
-</section>
-<script id="navbar-template" type="text/x-handlebars-template">
-  <div class="hide-on-desktop mobile-menu">
-    <img role="open mobile menu" id="open-menu" class="mobile-menu__open" src="/images/toggle-open.svg" alt="open menu" width="60" />
-    <img role="close mobile menu" id="close-menu" class="mobile-menu__close" src="/images/toggle-close.svg" alt="close menu" width="70" />
-    <img id="logo-menu" class="mobile-menu__logo" src="/images/HUGE.svg" alt="huge logo" width="50" />
-  </div>
-  <div class="navbar__wrapper" id="vertical-menu">
-    <div data-menu-type="primary" class="navbar__icon hide-on-mobile">
-      <img src="/images/HUGE.svg" alt="huge logo" width="60" />
+<!-- Navbar -->
+  <section id="navbar" class="navbar" role="navigation menu">
+  </section>
+  <script id="navbar-template" type="text/x-handlebars-template">
+    <div class="hide-on-desktop mobile-menu">
+      <img role="open mobile menu" id="open-menu" class="mobile-menu__open" src="/images/toggle-open.svg" alt="open menu" width="60" />
+      <img role="close mobile menu" id="close-menu" class="mobile-menu__close" src="/images/toggle-close.svg" alt="close menu" width="70" />
+      <img id="logo-menu" class="mobile-menu__logo" src="/images/HUGE.svg" alt="huge logo" width="50" />
     </div>
-    {{#each nemus_items}}
-      <div
-        data-active="false"
-        data-menu-type="primary"
-        class="navbar__item">
-        <a href="{{url}}" class="primary-f" role="{{name}}">{{name}}</a>
-         {{#if secondary}}
-          <div
-            data-menu-type="secondary"
-            class="navbar__item--secondary-navbar">
-            {{#each secondary}}
-            <div class="navbar__item--secondary-navbar__item">
-              <a href="#" class="secondary-f" role="{{this}}">{{this}}</a>
-            </div>
-            {{/each}}
-          </div>
-        {{/if}}
+    <div class="navbar__wrapper" id="vertical-menu">
+      <div data-menu-type="primary" class="navbar__icon hide-on-mobile">
+        <img src="/images/HUGE.svg" alt="huge logo" width="60" />
       </div>
-    {{/each}}
-    <small class="hide-on-desktop copy-right">&#169; 2014 Huge. All Rights Reserved.</small>
-  </div>
-</script>
-<section class="hero">
-  <h1 class="hero__title hide-on-mobile">Get paid for giving a shit.</h1>
-</section>
-<section class="content">
-  <h1 class="content__title hide-on-desktop">Get paid for giving a shit.</h1>
-  <p class="content__text">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Reiciendis similique tenetur voluptatem cupiditate itaque.
-    Exercitationem error id porro excepturi, unde accusamus.
-    Optio, aliquam. Cumque aliquam, eum veritatis alias
-    reiciendis libero!
-  </p>
-</section>
+      {{#each nemus_items}}
+        <div
+          data-active="false"
+          data-menu-type="primary"
+          class="navbar__item">
+          <a href="{{url}}" class="primary-f" role="{{name}}">{{name}}</a>
+          {{#if secondary}}
+            <div
+              data-menu-type="secondary"
+              class="navbar__item--secondary-navbar">
+              {{#each secondary}}
+              <div class="navbar__item--secondary-navbar__item">
+                <a href="#" class="secondary-f" role="{{this}}">{{this}}</a>
+              </div>
+              {{/each}}
+            </div>
+          {{/if}}
+        </div>
+      {{/each}}
+      <small class="hide-on-desktop copy-right">&#169; 2014 Huge. All Rights Reserved.</small>
+    </div>
+  </script>
+<!-- End Navbar -->
+<!-- Hero -->
+  <section class="hero">
+    <h1 class="hero__title hide-on-mobile">Get paid for giving a shit.</h1>
+  </section>
+<!-- End Hero -->
+<!-- Lorem Content -->
+  <section class="content">
+    <h1 class="content__title hide-on-desktop">Get paid for giving a shit.</h1>
+    <p class="content__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Reiciendis similique tenetur voluptatem cupiditate itaque.
+      Exercitationem error id porro excepturi, unde accusamus.
+      Optio, aliquam. Cumque aliquam, eum veritatis alias
+      reiciendis libero!
+    </p>
+  </section>
+<!-- End Lorem Content -->
 <div id="bg-overlay" class="bg-overlay"></div>
 <script src="/vendors/handlebars-v4.0.11.js"></script>
 <script src="/js/main.js"></script>

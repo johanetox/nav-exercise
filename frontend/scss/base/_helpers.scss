@@ -1,3 +1,4 @@
+/* shorthands to help out bulding fast markup */
 .hide-on-desktop {
   display: none;
   @include for-mobile-only {
