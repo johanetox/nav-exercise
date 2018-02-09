@@ -1,20 +1,16 @@
 {
-  "name": "NavExercise",
-  "description": "Exercise for candidates to complete where they will build a responsive nav layout",
-  "version": "0.1.1",
-  "authors": [
-    "Wes Hatch <whatch@hugeinc.com>",
-    "Karl Stanton <kstanton@hugeinc.com>"
-  ],
+  "name": "Johan Méndez NavExercise",
+  "description": "Exercise of a responsive nav layout",
+  "version": "0.0.1",
+  "author": "Johan Méndez <whatch@hugeinc.com>",
   "license": "© 2017 Huge. All Rights Reserved.",
-  "homepage": "https://github.com/hugeinc/NavExercise",
+  "homepage": "http://johan-mendez-test.surge.sh/",
   "bugs": {
     "url": "https://github.com/hugeinc/NavExercise/issues"
   },
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "autoprefixer": "7.2.4",
@@ -38,8 +34,6 @@
     "stylelint": "8.4.0"
   },
   "dependencies": {
-    "express": "~4.2.0",
-    "jshint": "2.9.5",
-    "morgan": "~1.0.0"
+    "jshint": "2.9.5"
   }
 }
